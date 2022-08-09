@@ -38,9 +38,19 @@ post http://localhost:3000/user.json
 Content-Type: application/json
 
 {
-  "name": "Bob",
-  "email": "Bob@bob.com",
+  "name": "amy",
+  "email": "@my.com",
   "password": "password"
 }
 
 #users create
+###
+post http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "@my.com",
+  "password": "password"
+}
+
+#user login
