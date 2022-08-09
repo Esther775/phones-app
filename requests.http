@@ -1,0 +1,34 @@
+get http://localhost:3000/phones
+#index route
+
+###
+get http://localhost:3000/phones/3
+#show route
+
+###
+post http://localhost:3000/phones
+Content-Type: application/json
+
+{
+  "color": "White",
+  "edition": "6g",
+  "size": "10 in"
+}
+
+#update route
+
+###
+patch http://localhost:3000/phones/3
+Content-Type: application/json
+
+{
+  "color": "Purple",
+  "edition": "7g",
+  "size": "11 in"
+}
+
+#update route
+
+###
+
+delete http://localhost:3000/phones/5
