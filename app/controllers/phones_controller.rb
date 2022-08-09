@@ -11,24 +11,24 @@ class PhonesController < ApplicationController
   end
 
   def create
-    phone = Phone.new(
+    @phone = Phone.new(
       color: params[:color],
       edition: params[:edition],
       size: params[:size],
     )
-    phone.save
+    @phone.save
 
-    render json: phone.as_json
+    render template: "phones/show"
   end
 
   def update
-    phone = Phone.find_by(id: params[:id])
-    phone.color = params[:color] || phone.color
-    phone.edition = params[:edition] || phone.edition
-    phone.size = params[:size] || phone.size
-    phone.save
+    @phone = Phone.find_by(id: params[:id])
+    @phone.color = params[:color] || phone.color
+    @phone.edition = params[:edition] || phone.edition
+    @phone.size = params[:size] || phone.size
+    @phone.save
 
-    render json: phone.as_json
+    render template: "phones/show"
   end
 
   def destroy

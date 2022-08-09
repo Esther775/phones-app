@@ -6,7 +6,7 @@ get http://localhost:3000/phones/3.json
 #show route
 
 ###
-post http://localhost:3000/phones
+post http://localhost:3000/phones.json
 Content-Type: application/json
 
 {
@@ -15,14 +15,14 @@ Content-Type: application/json
   "size": "10 in"
 }
 
-#update route
+#create route
 
 ###
-patch http://localhost:3000/phones/3
+patch http://localhost:3000/phones/3.json
 Content-Type: application/json
 
 {
-  "color": "Purple",
+  "color": "Yellow",
   "edition": "7g",
   "size": "11 in"
 }
@@ -32,3 +32,15 @@ Content-Type: application/json
 ###
 
 delete http://localhost:3000/phones/5
+
+###
+post http://localhost:3000/user.json
+Content-Type: application/json
+
+{
+  "name": "Bob",
+  "email": "Bob@bob.com",
+  "password": "password"
+}
+
+#users create

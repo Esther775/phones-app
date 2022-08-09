@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   #update route
 
   delete "phones/:id" => "phones#destroy"
+
+  post "/user" => "user#create"
+  #create a user
 end
