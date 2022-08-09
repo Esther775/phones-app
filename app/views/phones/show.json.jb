@@ -1,0 +1,8 @@
+{
+  id: @phone.id,
+  created_at: @phone.created_at,
+  updated_at: @phone.updated_at,
+  edition: @phone.edition,
+  size: @phone.size,
+
+}

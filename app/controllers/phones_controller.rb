@@ -1,14 +1,13 @@
 class PhonesController < ApplicationController
   def index
-    phone = Phone.all
-
-    render json: phone.as_json
+    @phone = Phone.all
+    render template: "phones/index"
   end
 
   def show
-    phone = Phone.find_by(id: params[:id])
+    @phone = Phone.find_by(id: params[:id])
 
-    render json: phone.as_json
+    render template: "phones/show"
   end
 
   def create

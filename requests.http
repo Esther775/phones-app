@@ -1,8 +1,8 @@
-get http://localhost:3000/phones
+get http://localhost:3000/phones.json
 #index route
 
 ###
-get http://localhost:3000/phones/3
+get http://localhost:3000/phones/3.json
 #show route
 
 ###

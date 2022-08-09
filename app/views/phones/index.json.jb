@@ -1,0 +1,8 @@
+@phones.map do |phone|
+  {
+    id: phone.id,
+    edition: phone.edition,
+    size: phone.size,
+    meassge: "hi",
+  }
+end
